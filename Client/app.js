@@ -21,3 +21,23 @@ tabs.forEach(tab => {
     document.getElementById(tabId).style.display = 'block';
   });
 });
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(contactForm);
+const data = Object.fromEntries(formData.entries());
+  fetch('http://127.0.0.1:3000/submit-form', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.text())
+  .catch(error => {
+    console.error(error);
+    alert('There was an error sending your message. Please try again later.');
+  });
+});

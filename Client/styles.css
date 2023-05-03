@@ -21,6 +21,12 @@ h1{
 	height: auto;
 	
 }
+#contactBut{
+	background-color: #000000;
+}
+#contactBut:hover {
+	background-color: #ff594d;
+}
 
 nav ul {
 	list-style: none;
@@ -104,7 +110,7 @@ button {
 button:hover {
 	background-color: #ff594d;
 }
-
+form input[type="tel"],
 form input[type="text"],
 form input[type="email"],
 form textarea {
