@@ -159,3 +159,23 @@ form input[type="submit"]:hover {
 	font-size: 18px;
 	line-height: 1.5;
 }
+#fade-container {
+	opacity: 0;
+	transition: opacity 1s ease;
+  }
+  
+  #fade-container.fade-in {
+	opacity: 1;
+  }
+  #frontView{
+
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: -2px;
+	margin-top: -4px; 
+  width:20%/*Just add this line*/
+
+	
+  }
